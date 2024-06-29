@@ -22,25 +22,25 @@
       }
     </style>
 
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
         <df-messenger
-      intent="WELCOME"
+       chat-icon="https:&#x2F;&#x2F;burger-she-said.de&#x2F;kkicon2.png"
+          intent="WELCOME"
       chat-title="KARIKAALA Restaurant Chatbot"
-      agent-id="restaurant-agent4-hnqm"
+       agent-id="8b0be558-c76c-49a7-9d11-6dba8b3cd1dd"
       language-code="en"
       chat-icon="false">
     </df-messenger>
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  chat-icon="https:&#x2F;&#x2F;burger-she-said.de&#x2F;kkicon2.png"
-  intent="WELCOME"
-  chat-title="KARIKAALA Restaurant Chatbot4"
-  agent-id="8b0be558-c76c-49a7-9d11-6dba8b3cd1dd"
-  language-code="en"
-></df-messenger>
   </head>
   <body>
 
+    <script>
+      window.addEventListener('dfMessengerLoaded', function(event) {
+        const messenger = document.querySelector('df-messenger');
+        messenger.renderCustomText('Welcome to our service! How can I help you today?');
+      });
+    </script>
 
     <div class="custom-chat-icon" onclick="toggleChat()"></div>
 
