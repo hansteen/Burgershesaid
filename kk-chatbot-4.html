@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title></title>
-
+    <title>Chatbot</title>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  chat-icon="https:&#x2F;&#x2F;burger-she-said.de&#x2F;kkicon.png"
-  intent="WELCOME"
-  chat-title="Restaurant-Agent4"
-  agent-id="8b0be558-c76c-49a7-9d11-6dba8b3cd1dd"
-  language-code="en"
-></df-messenger>
-</head>
-  
+    <style>
+      df-messenger {
+        --df-messenger-bot-message: #e0e0e0;
+        --df-messenger-button-titlebar-color: #dfdfdf;
+        --df-messenger-chat-background-color: #fafafa;
+      }
+      .custom-chat-icon {
+        background-image: url('https://burger-she-said.de/kkicon2.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        cursor: pointer;
+        z-index: 9999;
+      }
+    </style>
+  </head>
   <body>
-  <center>
-  <table width="500" height=500 border=1>
-  <tr><td valign="top">  <font face=arial,helvetica size="8">
-Willkommen beim KARIKAALA Restaurant Chatbot!
- </font>
-</td>
-</tr>
-  </table>
-</center>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Chatbot"
+      agent-id="YOUR-AGENT-ID"
+      language-code="en"
+      chat-icon="false">
+    </df-messenger>
+
+    <div class="custom-chat-icon" onclick="toggleChat()"></div>
+
+    <script>
+      function toggleChat() {
+        const chat = document.querySelector('df-messenger');
+        const display = chat.style.display;
+        chat.style.display = display === 'none' || display === '' ? 'block' : 'none';
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        const chat = document.querySelector('df-messenger');
+        chat.style.display = 'none';  // Initially hide the chat
+      });
+    </script>
   </body>
 </html>
