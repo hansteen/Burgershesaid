@@ -1,0 +1,5 @@
+/* Beispiel für die Anpassung des Chat-Icons */
+:root {
+    --df-messenger-chat-bubble-icon-color: #ff9900; /* Farbe des Icons */
+    --df-messenger-chat-bubble-icon-size: 40px; /* Größe des Icons */
+}
