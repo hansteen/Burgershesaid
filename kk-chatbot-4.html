@@ -35,25 +35,6 @@
   </head>
   <body>
 
-    <script>
-      window.addEventListener('dfMessengerLoaded', function(event) {
-        const messenger = document.querySelector('df-messenger');
-        messenger.renderCustomText('Welcome to our service! How can I help you today?');
-      });
-    </script>
-
-    <div class="custom-chat-icon" onclick="toggleChat()"></div>
-
-    <script>
-      function toggleChat() {
-        const chat = document.querySelector('df-messenger');
-        const display = chat.style.display;
-        chat.style.display = display === 'none' || display === '' ? 'block' : 'none';
-      }
-      document.addEventListener('DOMContentLoaded', function() {
-        const chat = document.querySelector('df-messenger');
-        chat.style.display = 'block';  // Initially hide the chat
-      });
-    </script>
+    
   </body>
 </html>
