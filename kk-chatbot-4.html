@@ -34,6 +34,18 @@
       chat-icon="false">
     </df-messenger>
 
+
+        <script>
+      function toggleChat() {
+        const chat = document.querySelector('df-messenger');
+        const display = chat.style.display;
+        chat.style.display = display === 'none' || display === '' ? 'block' : 'none';
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        const chat = document.querySelector('df-messenger');
+        chat.style.display = 'block';  // mit none Initially hide the chat
+      });
+    </script>
   </head>
   <body>
 
