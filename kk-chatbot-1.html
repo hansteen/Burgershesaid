@@ -19,8 +19,23 @@ er<!DOCTYPE html>
     --df-messenger-input-font-color: #f2bf5e;
      --df-messenger-font-color: white;
   }
+       .custom-chat-icon {
+        background-image: url('https://burger-she-said.de/kkicon2.png');
+        background-size: cover;
+        background-color: #007bff;
+        border: 2px solid #050505;
+       border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        cursor: pointer;
+        z-index: 9999;
+    }
 </style>
 
+    <div class="custom-chat-icon" onclick="toggleChat()"></div>
     
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 <df-messenger
@@ -30,6 +45,18 @@ er<!DOCTYPE html>
   language-code="de"
 ></df-messenger>
 
+    
+        <script>
+      function toggleChat() {
+        const chat = document.querySelector('df-messenger');
+        const display = chat.style.display;
+        chat.style.display = display === 'none' || display === '' ? 'block' : 'none';
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        const chat = document.querySelector('df-messenger');
+        chat.style.display = 'block';  // mit none Initially hide the chat
+      });
+    </script>
 
 </head>
   <body>
