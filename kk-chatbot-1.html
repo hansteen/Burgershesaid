@@ -34,10 +34,20 @@
         z-index: 9999;
     }
 </style>
-
     
     <div class="custom-chat-icon" onclick="toggleChat()"></div>
     
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+     chat-icon="https://burger-she-said.de/kkicon2.png"
+    intent="WELCOME"
+    chat-title="KARIKAALA Restaurant Chatbot"
+    agent-id="8b0be558-c76c-49a7-9d11-6dba8b3cd1dd"
+    language-code="en"
+    chat-icon="false"
+  ></df-messenger>
+</div>
+       
         <script>
       function toggleChat() {
         const chat = document.querySelector('df-messenger');
@@ -49,27 +59,13 @@
         chat.style.display = 'block';  // mit none Initially hide the chat
       });
     </script>
-
+    
+    <div id="chat-container" class="chat-container">
+<script src="script.js"></script>
+      
 </head>
   <body>
-   
-<div id="chat-container" class="chat-container">
-  <df-messenger
-     chat-icon="https://burger-she-said.de/kkicon2.png"
-    intent="WELCOME"
-    chat-title="KARIKAALA Restaurant Chatbot"
-    agent-id="8b0be558-c76c-49a7-9d11-6dba8b3cd1dd"
-    language-code="en"
-    chat-icon="false"
-  ></df-messenger>
-</div>
-
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    
-<script src="script.js"></script>
-
-
-    
+  
   <center>
   <table width="600" height=300 border=0>
     <tr><td height="150" colspan="3"></td></tr>
