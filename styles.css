@@ -15,8 +15,14 @@
 
 /* Beispielhafte CSS-Regeln für das Chatbot-Icon */
 .custom-chat-icon {
+  width: 30px;  /* gewünschte Breite */
+  height: 30px; /* gewünschte Höhe */
+
+  .chatbot-icon {
   width: 50px;  /* gewünschte Breite */
   height: 50px; /* gewünschte Höhe */
+}
+
 }
 
 @media (max-width: 768px) {
