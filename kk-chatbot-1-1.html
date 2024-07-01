@@ -38,17 +38,6 @@
     
     <div class="custom-chat-icon" onclick="toggleChat()"></div>
     
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
- chat-icon="https://burger-she-said.de/kkicon2.png"
-  intent="WELCOME"
-  chat-title="KARIKAALA Restaurant Chatbot"
-  agent-id="8b0be558-c76c-49a7-9d11-6dba8b3cd1dd"
-  language-code="de"
-  chat-icon="false">
-</df-messenger>
-
-    
         <script>
       function toggleChat() {
         const chat = document.querySelector('df-messenger');
@@ -63,26 +52,20 @@
 
 </head>
   <body>
-
-    
-
-
-
    
 <div id="chat-container" class="chat-container">
-  <div id="chat-icon" class="chat-icon">
-    <img src="chat-icon.png" alt="Chat Icon" class="chat-icon-img">
-  </div>
-<div id="chat-window" class="chat-window">
-  <iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/8b0be558-c76c-49a7-9d11-6dba8b3cd1dd">
-  </iframe>
-</div>
+  <df-messenger
+     chat-icon="https://burger-she-said.de/kkicon2.png"
+    intent="WELCOME"
+    chat-title="KARIKAALA Restaurant Chatbot"
+    agent-id="8b0be558-c76c-49a7-9d11-6dba8b3cd1dd"
+    language-code="en"
+    hat-icon="false"
+  ></df-messenger>
 </div>
 
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    
 <script src="script.js"></script>
 
 
