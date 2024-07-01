@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Optional: Toggle chat window visibility on chat icon click
   chatIcon.addEventListener('click', function () {
     if (chatWindow.style.display === 'block') {
-      chatWindow.style.display = 'none';
+      chatWindow.style.display = 'block';
     } else {
       chatWindow.style.display = 'block';
     }
