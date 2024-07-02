@@ -41,6 +41,23 @@ body {
   overflow: hidden;
 }
 
+/* Entfernen des schwarzen Hintergrunds und Anpassen der Größe */
+.chatbot-icon-wrapper {
+  background: none;  /* Entfernt den schwarzen Hintergrund */
+  border: none;      /* Entfernt eventuell vorhandene Ränder */
+  width: 50px;       /* Setzt die gewünschte Breite */
+  height: 50px;      /* Setzt die gewünschte Höhe */
+  display: flex;     /* Zentriert das Icon innerhalb des Containers */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sicherstellen, dass das Icon die volle Größe hat */
+.chatbot-icon {
+  width: 100%;
+  height: 100%;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 600px) {
   .chat-container {
