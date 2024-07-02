@@ -49,6 +49,21 @@
     }
 </style>
 
+
+      <style>
+    .chat-container {
+      width: 400px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .chat-button {
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+
     <div class="custom-chat-icon" onclick="toggleChat()"></div>
     
           <script>
@@ -65,6 +80,23 @@
 
 </head>
   <body>
+
+  <div class="chat-container">
+    <div id="chat-output"></div>
+    <button class="chat-button" onclick="goBack()">Zurück</button>
+  </div>
+
+  <script>
+    // JavaScript-Funktion für den "Zurück"-Button
+    function goBack() {
+      // Hier können Sie den Zustand des Chatbots ändern, um zur vorherigen Nachricht oder zur Ausgangsseite zurückzukehren
+      document.getElementById('chat-output').innerHTML = 'Zurück zur Startseite. Wie kann ich Ihnen helfen?';
+    }
+  </script>
+
+
+
+    
       <div class="chatbot-icon-wrapper">
     <img src="kkicon2.png" class="chatbot-icon" alt="Chatbot Icon">
   </div>
