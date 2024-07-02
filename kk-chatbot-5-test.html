@@ -81,18 +81,28 @@
 </head>
   <body>
 
-  <div class="chat-container">
-    <div id="chat-output"></div>
-    <button class="chat-button" onclick="goBack()">Zurück</button>
+<div id="chat-container">
+    <!-- Ihr Chat-UI hier -->
+    <div id="chat-messages"></div>
   </div>
 
   <script>
-    // JavaScript-Funktion für den "Zurück"-Button
-    function goBack() {
-      // Hier können Sie den Zustand des Chatbots ändern, um zur vorherigen Nachricht oder zur Ausgangsseite zurückzukehren
-      document.getElementById('chat-output').innerHTML = 'Zurück zur Startseite. Wie kann ich Ihnen helfen?';
+    function displayMessage(message, delay) {
+      setTimeout(() => {
+        const chatMessages = document.getElementById('chat-messages');
+        const messageElement = document.createElement('div');
+        messageElement.className = 'chat-message';
+        messageElement.innerText = message;
+        chatMessages.appendChild(messageElement);
+      }, delay);
     }
+
+    // Beispiel für Nachrichten mit Verzögerung
+    displayMessage("Hallo! Wir freuen uns, dass Sie unseren Chatbot nutzen.", 0);
+    displayMessage("Schauen Sie sich unsere attraktiven Preisangebote an!", 3000); // 3 Sekunden Verzögerung
+    displayMessage("Sie können nach Produkten suchen oder spezifische Angebote anzeigen lassen.", 6000); // 6 Sekunden Verzögerung
   </script>
+
 
 
 
