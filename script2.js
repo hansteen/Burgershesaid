@@ -18,4 +18,9 @@ document.getElementById('chat-icon').addEventListener('click', function() {
   } else {
     chatWindow.style.display = 'none';
   }
+// Beispiel: Überprüfung, ob JavaScript zusätzliche Stile hinzufügt
+document.addEventListener('DOMContentLoaded', (event) => {
+  const chatbotIconWrapper = document.querySelector('.chatbot-icon-wrapper');
+  chatbotIconWrapper.style.background = 'none';  // Entfernt den Hintergrund
+  chatbotIconWrapper.style.border = 'none';      // Entfernt den Rand
 });
