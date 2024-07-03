@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta charset="UTF-8">
-    <title>KARIKAALA Restaurant Chatbot</title>
+<html>
+<head>
+  <title>KARIKAALA Restaurant Chatbot</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    df-messenger {
+      --df-messenger-bot-message: #878fac;
+      --df-messenger-button-titlebar-color: #df8b13;
+      --df-messenger-chat-background-color: #fafafa;
+      --df-messenger-font-color: white;
+      --df-messenger-send-icon: #df8b13;
+      --df-messenger-user-message: #479b3d;
+    }
+  </style>
+</head>
+<body>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Chatbot"
+    agent-id="a45af32c-ba0a-4105-9669-31fa78acf006"
+    language-code="de"
+  ></df-messenger>
 
-
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="AppointmentScheduler"
-  agent-id="a45af32c-ba0a-4105-9669-31fa78acf006"
-  language-code="en"
-></df-messenger>
 
     <center>
   <table width="600" height=300 border=0>
